@@ -5,7 +5,7 @@ from faulthandler import disable
 from tkinter import*
 from math import*
 from turtle import bgcolor
-from tkinter import ttk
+
 manslogs = Tk()
 manslogs.title("Calculator")
 # manslogs.geometry("300x300")
@@ -13,7 +13,6 @@ manslogs.configure(bg="black")
 
 
 manslogs.attributes('-toolwindow', True)
-
 
 
 def btnclick(number):
@@ -27,7 +26,7 @@ def btncommand(command):
     global num1  # jaiegaume skaitlis
     global mathOp  # matemātiskais operātors
     mathOp = command  # +,-,x,:
-    num1 = int(e.get())
+    num1 = float(e.get())
     e.delete(0, END)
     return 0
 
