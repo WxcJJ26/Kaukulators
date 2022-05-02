@@ -3,9 +3,17 @@ from ast import operator
 from distutils import command
 from tkinter import*
 from math import*
+from turtle import bgcolor
+
 manslogs = Tk()
 manslogs.title("Calculator")
 # manslogs.geometry("300x300")
+manslogs.configure(bg="black")
+
+
+manslogs.attributes('-toolwindow', True)
+
+
 
 def btnclick(number):
     current = e.get()  # nolasa esošo skaitli
@@ -77,50 +85,50 @@ def square():
 
 
 
-e = Entry(manslogs, width=15, bd=20, font=("Arial Black", 20))
+e = Entry(manslogs, bg="purple", width=20, bd=20, font=("Arial Black", 20))
 e.grid(row=0, column=0, columnspan=5)
 
-btn0 = Button(manslogs, text="0", padx="40",
+btn0 = Button(manslogs, font=5, bg='red', text="0", padx="40",
               pady="20", command=lambda: btnclick(0))
-btn1 = Button(manslogs, text="1", padx="40",
+btn1 = Button(manslogs,font=5, bg='red',text="1", padx="40",
               pady="20", command=lambda: btnclick(1))
-btn2 = Button(manslogs, text="2", padx="40",
+btn2 = Button(manslogs,font=5,bg='red', text="2", padx="40",
               pady="20", command=lambda: btnclick(2))
-btn3 = Button(manslogs, text="3", padx="40",
+btn3 = Button(manslogs,font=5,bg='red', text="3", padx="40",
               pady="20", command=lambda: btnclick(3))
-btn4 = Button(manslogs, text="4", padx="40",
+btn4 = Button(manslogs,font=5,bg='red', text="4", padx="40",
               pady="20", command=lambda: btnclick(4))
-btn5 = Button(manslogs, text="5", padx="40",
+btn5 = Button(manslogs,font=5,bg='red', text="5", padx="40",
               pady="20", command=lambda: btnclick(5))
-btn6 = Button(manslogs, text="6", padx="40",
+btn6 = Button(manslogs,font=5,bg='red', text="6", padx="40",
               pady="20", command=lambda: btnclick(6))
-btn7 = Button(manslogs, text="7", padx="40",
+btn7 = Button(manslogs,font=5,bg='red', text="7", padx="40",
               pady="20", command=lambda: btnclick(7))
-btn8 = Button(manslogs, text="8", padx="40",
+btn8 = Button(manslogs,font=5,bg='red', text="8", padx="40",
               pady="20", command=lambda: btnclick(8))
-btn9 = Button(manslogs, text="9", padx="40",
+btn9 = Button(manslogs,font=5,bg='red', text="9", padx="40",
               pady="20", command=lambda: btnclick(9))
 
-btnsum = Button(manslogs, text="+", padx="39", pady="20",
+btnsum = Button(manslogs,font=5,bg='cyan', text="+", padx="39", pady="20",
                 command=lambda: btncommand("+"))
 
-btnsub = Button(manslogs, text="-", padx="40", pady="20",
+btnsub = Button(manslogs,font=5,bg='cyan', text="-", padx="41", pady="20",
                 command=lambda: btncommand("-"))
 
-btnmul = Button(manslogs, text="x", padx="40", pady="20",
+btnmul = Button(manslogs,font=5,bg='cyan', text="x", padx="40", pady="20",
                 command=lambda: btncommand("x"))
 
-btndiv = Button(manslogs, text=":", padx="41", pady="20",
+btndiv = Button(manslogs,font=5,bg='cyan', text=":", padx="42", pady="20",
                 command=lambda: btncommand(":"))
 
-btnproc = Button(manslogs, text="%", padx="37.5", pady="20",
+btnproc = Button(manslogs,font=5,bg='cyan', text="%", padx="37.5", pady="20",
                 command=lambda: btncommand("%"))
 
-btnclear = Button(manslogs, text="C", padx="40", pady="20",command=notirit)
-btnequals = Button(manslogs, text="=", padx="40", pady="20",command=btnVienads)
-btnsqrt = Button(manslogs, text="√", padx="40", pady="20",command=sq_rt)
-btnlog = Button(manslogs, text="log", padx="35", pady="20",command=logarithm)
-btnsquared = Button(manslogs, text="x²", padx="40", pady="20",command=square)
+btnclear = Button(manslogs,font=5,bg='yellow', text="C", padx="38", pady="20",command=notirit)
+btnequals = Button(manslogs,font=5,bg='yellow', text="=", padx="40", pady="20",command=btnVienads)
+btnsqrt = Button(manslogs,font=5,bg='lime', text="√", padx="40", pady="20",command=sq_rt)
+btnlog = Button(manslogs,font=5,bg='lime', text="log", padx="35", pady="20",command=logarithm)
+btnsquared = Button(manslogs,font=5,bg='lime', text="x²", padx="40", pady="20",command=square)
 
 
 btnproc.grid(row=5, column=4)
