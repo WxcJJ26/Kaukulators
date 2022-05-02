@@ -1,10 +1,11 @@
 from argparse import MetavarTypeHelpFormatter
 from ast import operator
 from distutils import command
+from faulthandler import disable
 from tkinter import*
 from math import*
 from turtle import bgcolor
-
+from tkinter import ttk
 manslogs = Tk()
 manslogs.title("Calculator")
 # manslogs.geometry("300x300")
